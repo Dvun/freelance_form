@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker-compos down
+docker-compose down

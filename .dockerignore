@@ -1,0 +1,12 @@
+/.git
+/.idea
+/.vscode
+
+
+# client
+/client/node_modules/
+/client/npm-debug.log
+
+# server
+/server/node_modules/
+/server/npm-debug.log
