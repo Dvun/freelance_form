@@ -1,6 +1,7 @@
 import React, {FC} from 'react'
 import './styles.scss'
 import {useFormContext} from 'react-hook-form'
+import { ErrorMessage } from '@hookform/error-message'
 
 interface Props {
   type: string
@@ -10,7 +11,7 @@ interface Props {
 }
 
 const InputField: FC<Props> = ({type, label, name, placeholder}) => {
-  const {register} = useFormContext()
+  const {register, formState:{errors}} = useFormContext()
 
   return (
     <div className="field">
@@ -23,7 +24,8 @@ const InputField: FC<Props> = ({type, label, name, placeholder}) => {
           {...register(name)}
         />
       </div>
-      <p className="help is-danger mb-0">This email is invalid</p>
+      <ErrorMessage name={name} errors={errors} render={({message}) => 
+        <p className="help is-danger mb-0">{message}</p>}/>
     </div>
   )
 }
