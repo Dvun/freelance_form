@@ -5,30 +5,20 @@ import InputField from '../../components/inputField'
 import {IFreelanceFormData} from '../../interfaces/interfaces'
 import {yupResolver} from '@hookform/resolvers/yup'
 import {freelanceSchema} from '../../validators/validators'
+import FormActions from '../../redux/formSlice/FormActions'
+import {useAppDispatch, useAppSelector} from '../../redux/store'
 
 const HomePage = () => {
+  const dispatch = useAppDispatch()
+  const {isLoading} = useAppSelector(state => state.formSlice)
   const methods = useForm<IFreelanceFormData>({
     mode: 'onBlur',
     resolver: yupResolver(freelanceSchema),
-    defaultValues: {
-      firstName: '',
-      companyName: '',
-      address: '',
-      zipCode: '',
-      town: '',
-      businessId: '',
-      contactEmail: '',
-      contactPersonalName: '',
-      contact: '',
-      phoneNumber: '',
-      signatureName: '',
-      signatureTitle: ''
-    }
   })
   const watchFields = methods.watch()
   
   const onSubmit = (data: IFreelanceFormData) => {
-    console.log(data)
+    dispatch(FormActions.SendData(data))
   }
   
   return (
@@ -95,7 +85,7 @@ const HomePage = () => {
           
           <div className='buttons is-flex is-justify-content-flex-end'>
             <button className='button is-warning is-size-7-mobile' type='button' onClick={() => methods.reset()}>Clear</button>
-            <button className='button is-primary is-size-7-mobile' type='submit'>Send</button>
+            <button className={`button is-primary is-size-7-mobile ${isLoading ? 'is-loading' : ''}`} type='submit'>Send</button>
           </div>
           
         </form>

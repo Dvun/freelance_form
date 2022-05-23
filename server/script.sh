@@ -1,0 +1,8 @@
+#!/bin/bash
+
+CONTACT=$1
+TOWN=$2
+ADDRESS=$3
+
+echo "HELLO FROM SCRIPT $CONTACT $TOWN $ADDRESS"
+
