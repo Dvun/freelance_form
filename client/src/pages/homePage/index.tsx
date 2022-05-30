@@ -34,7 +34,7 @@ const HomePage = () => {
             <>
               <div className='columns mb-4'>
                 <div className='column is-half pt-0 pb-4'>
-                  <InputField label='Name' name='firstName' type='text' placeholder='Insert Name' />
+                  <InputField label='Name' name='firstName' type='text' placeholder='Insert Name'/>
                 </div>
                 <div className='column is-half pt-0  pb-0'>
                   <InputField label='Company Name' name='companyName' type='text' placeholder='Company Name' />

@@ -15,12 +15,13 @@ const InputField: FC<Props> = ({type, label, name, placeholder}) => {
 
   return (
     <div className="field">
-      <label className="label mb-0 is-size-7-mobile">{label}</label>
+      <label className="label mb-0 is-size-7-mobile" htmlFor={name}>{label}</label>
       <div className="control">
         <input 
           className="input is-primary is-size-7-mobile" 
           type={type} 
           placeholder={placeholder}
+          data-testid={name}
           {...register(name)}
         />
       </div>
