@@ -52,6 +52,7 @@
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
-    "@types/react-redux": "^7.1.24"
+    "@types/react-redux": "^7.1.24",
+    "react-test-renderer": "^18.1.0"
   }
 }
