@@ -10,7 +10,7 @@ if test ! `which soffice`; then
     exit 1
 fi
 
-SOURCE_FILE="/media/business/Dropbox/contracts/templates/sourcing/phz-sourcing-frame-agreement-fi.docx"
+SOURCE_FILE="media/business/Dropbox/contracts/templates/sourcing/phz-sourcing-frame-agreement-fi.docx"
 if test ! -e $SOURCE_FILE; then
     echo "Error: Can't access $SOURCE_FILE maybe VPN is down, or somebody has the file open holds a lock"
     exit 2
