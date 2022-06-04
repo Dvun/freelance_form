@@ -17,14 +17,15 @@ services:
       - server
     
   server:
-    env_file: ./server/.env.dev
-    image: freelance_form_server-dev
     container_name: freelance_form_server-dev
+    env_file: ./server/.env.dev
     build:
       context: ./server/
       dockerfile: Dockerfile
     restart: unless-stopped
     volumes:
       - ./server:/app
+      - ./server/.env.dev:/app/.env
+      - /app/node_modules
     ports:
       - '8080:8080'
