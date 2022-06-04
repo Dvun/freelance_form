@@ -1,8 +1,8 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import cors from 'cors'
-import formRouter from './src/routes/FormRouter'
-import authRouter from './src/routes/authRouter'
+import formRouter from './routes/FormRouter'
+import authRouter from './routes/authRouter'
 
 dotenv.config()
 
