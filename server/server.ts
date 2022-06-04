@@ -2,6 +2,7 @@ import express from 'express'
 import dotenv from 'dotenv'
 import cors from 'cors'
 import formRouter from './src/routes/FormRouter'
+import authRouter from './src/routes/authRouter'
 
 dotenv.config()
 
@@ -12,6 +13,7 @@ app.use(express.urlencoded({extended: true}))
 
 
 app.use('/api', formRouter)
+app.use('/api', authRouter)
 
 
 const PORT = process.env.PORT || 8080

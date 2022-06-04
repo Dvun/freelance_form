@@ -6,7 +6,9 @@ class FormService {
 
   async SaveForm(data: IFreelanceFormData) {
 
-    exec(`sh ./script.sh ${data.contact} ${data.town} ${data.address}`, (error, stdout, stderr) => {
+    exec(`sh ./sales-sourcing-frame-agreement-xlsx.sh '${data.companyName}' '${data.address}' ${data.zipCode} ${data.town} ${data.businessId} '${data.contactName}' ${data.contactEmail} ${data.phoneNumber} '${data.signatureName}' '${data.signatureTitle}' `, 
+      (error, stdout, stderr) => {
+      if (stderr) 
       if (error) {
         console.error(`exec error ${error}`)
         return

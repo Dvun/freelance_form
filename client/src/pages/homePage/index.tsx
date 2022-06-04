@@ -32,17 +32,11 @@ const HomePage = () => {
           {
             watchFields &&
             <>
-              <div className='columns mb-4'>
-                <div className='column is-half pt-0 pb-4'>
-                  <InputField label='Name' name='firstName' type='text' placeholder='Insert Name'/>
-                </div>
-                <div className='column is-half pt-0  pb-0'>
-                  <InputField label='Company Name' name='companyName' type='text' placeholder='Company Name' />
-                </div>
-              </div>
+              <InputField label='Company Name' name='companyName' type='text' placeholder='Company Name'/>
+              
               <InputField label='Address' name='address' type='text' placeholder='Address' />
 
-              <div className='columns mt-4 mb-4'>
+              <div className='columns mt-4'>
                 <div className='column pt-0 pb-4'>
                   <InputField label='ZIP' name='zipCode' type='text' placeholder='ZIP code' />
                 </div>
@@ -54,18 +48,11 @@ const HomePage = () => {
                 </div>
               </div>
 
-              <div className='columns mb-4'>
+              <InputField label='Contact Name' name='contactName' type='text' placeholder='Contact Name' />
+
+              <div className='columns mt-4 mb-4'>
                 <div className='column is-half pt-0  pb-4'>
                   <InputField label='Contact Email' name='contactEmail' type='email' placeholder='Contact Email' />
-                </div>
-                <div className='column is-half pt-0'>
-                  <InputField label='Contact Person Name' name='contactPersonalName' type='text' placeholder='Contact Person Name' />
-                </div>
-              </div>
-
-              <div className='columns mb-4'>
-                <div className='column is-half pt-0  pb-4'>
-                  <InputField label='Contact' name='contact' type='text' placeholder='Contact' />
                 </div>
                 <div className='column is-half pt-0'>
                   <InputField label='Contact Phone' name='phoneNumber' type='tel' placeholder='Contact Phone'/>
