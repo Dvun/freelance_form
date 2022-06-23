@@ -1,6 +1,6 @@
 # PROJECT
 
-In this project used a react with typescript for the frontend and a node.js express with typescript for the backend. \
+In this project used a react with typescript for the frontend and a node.js express with typescript for the backend.
 #### Frontend:
  1. react, 
  2. typescript, 
