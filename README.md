@@ -16,9 +16,9 @@ In this project used a react with typescript for the frontend and a node.js expr
 
 ### START
 For the starting project in freelance_form root folder need call shell script `./up.sh` \
-With this script automatic start both client and server. \
+With this script automatic start both client and server.
 
 ### STOP
 Stop project, in freelance_form folder need call shell script `./down.sh` \
-With this script automatic stop both client and server. \
+With this script automatic stop both client and server.
   
